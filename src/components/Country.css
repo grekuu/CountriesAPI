@@ -1,0 +1,51 @@
+.countries-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.country{
+    width: calc(100% / 4);
+    margin-top: 50px;
+    text-align: center;
+}
+
+.country > img{
+    width: 300px;
+    height: 200px;
+}
+
+.country > h3{
+    margin-top: 20px;
+}
+
+.search-section{
+    margin-top: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-button{
+    height: 60%;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.search-button > img{
+    height: 100%;
+}
+
+.search-input{
+    height: 100%;
+    width: 80%;
+    border: none;
+}
+
+.search-section > select{
+    height: 100%;
+    border: none;
+    flex-grow: 1;
+}

@@ -1,0 +1,26 @@
+.header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > h3{
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+
+.header > button{
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.moon{
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
