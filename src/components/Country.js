@@ -45,8 +45,9 @@ function Country() {
         <select
           onChange={(e) => setSelectedValue(e.target.value)}
           className={theme ? "select dark-blue" : "select"}
+          defaultValue="default"
         >
-          <option value="none" selected disabled hidden>
+          <option value="default" selected disabled hidden>
             Filter by Region
           </option>
           <option value="Africa">Africa</option>
