@@ -67,3 +67,35 @@
 .very-dark-blue{
     background-color: hsl(207, 26%, 17%);
 }
+
+.forModal{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+@media only screen and (max-width: 375px) {
+    .search-section{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .search-section > .select{
+        margin-top: 10px;
+        min-height: 30px;
+    }
+
+    .search-input{
+        min-height: 30px;
+    }
+
+    .search-button>img {
+        display: none;
+    }
+}
