@@ -2,11 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Country.css";
 import search from "../img/magnifying-glass-solid.svg";
+import { useContext } from "react";
+import Context from "../Context";
 
 function Country() {
   const [countries, setCountries] = useState([]);
   const [searchCountry, setSearchCountry] = useState("");
   const [selectedValue, setSelectedValue] = useState("");
+  const theme = useContext(Context);
 
   useEffect(() => {
     axios
@@ -21,21 +24,28 @@ function Country() {
   }, []);
 
   return (
-    <div className="countries-container">
+    <div
+      className={
+        theme ? "countries-container very-dark-blue" : "countries-container"
+      }
+    >
       <div className="search-section">
         <button
-          className="search-button"
+          className={theme ? "search-button very-dark-blue" : "search-button"}
           onClick={() => console.log(selectedValue)}
         >
           <img src={search} alt="glass" />
         </button>
         <input
           type="text"
-          className="search-input"
+          className={theme ? "search-input dark-blue" : "search-input"}
           placeholder="Search for a country"
           onChange={(e) => setSearchCountry(e.target.value)}
         />
-        <select onChange={(e) => setSelectedValue(e.target.value)}>
+        <select
+          onChange={(e) => setSelectedValue(e.target.value)}
+          className={theme ? "select dark-blue" : "select"}
+        >
           <option value="none" selected disabled hidden>
             Filter by Region
           </option>
@@ -66,7 +76,10 @@ function Country() {
           }
         })
         .map((country) => (
-          <div key={country.name} className="country">
+          <div
+            key={country.name}
+            className={theme ? "country dark-blue" : "country"}
+          >
             <img src={country.flags.png} alt={country.name} />
             <h3>{country.name}</h3>
             <br />

@@ -6,7 +6,15 @@
     font-family: 'Nunito Sans', sans-serif;;
 }
 
+.background-switcher{
+    width: 100vw;
+    height: 100vh;
+}
+
+.very-dark-blue {
+    background-color: hsl(207, 26%, 17%);
+}
+
 body{
-    padding-left: 75px;
-    padding-right: 75px;
+    overflow-x: hidden
 }
