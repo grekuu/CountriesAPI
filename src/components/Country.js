@@ -47,7 +47,7 @@ function Country() {
           className={theme ? "select dark-blue" : "select"}
           defaultValue="default"
         >
-          <option value="default" selected disabled hidden>
+          <option value="default" disabled hidden>
             Filter by Region
           </option>
           <option value="Africa">Africa</option>
